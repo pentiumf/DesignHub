@@ -1,31 +1,19 @@
 $(document).ready(function () {
 
-        $('.menu').click(function() {
-            $('.overlay').addClass('anim');
-            $('.menu').hide();
-            $('.close').show();
-        });
+    $('.carousel').carousel({
+        pause: "hover"
+    });
     
-        $('.close').click(function() {
-            $('.overlay').removeClass('anim');
-            $('.close').hide();
-            $('.menu').show();
-        });
-        
-        
-        
-       
-        setInterval(moveRight, 3000);
-        
-        function moveRight() {
-        var currentSlide = jQuery(".active-fade");
-                var nextSlide = currentSlide.next();
-
-                if (nextSlide.length === 0) {
-                    nextSlide = jQuery(".fade").first();
-                }
-
-            currentSlide.fadeOut(1000).removeClass("active-fade");
-            nextSlide.fadeIn(1000).addClass("active-fade");
-        }
+    
 });
+
+
+//document.getElementById('links').onclick = function (event) {
+//    event = event || window.event;
+//    var target = event.target || event.srcElement,
+//        link = target.src ? target.parentNode : target,
+//        options = {index: link, event: event},
+//        links = this.getElementsByTagName('a');
+//    blueimp.Gallery(links, options);
+//};
+
